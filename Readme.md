@@ -25,8 +25,7 @@ The Payroll Management System will provide several benefits to the business. Aut
 Our Target Customers are companies ranging from small business to big corporations. Our application is meant to be user friendly so that no company or employee fears the thought of figuring out our Payroll Management System. 
 
 # Entity Relationship (ER) Diagram
-![Entity Relationship (ER) Diagram](https://github.com/MinShiMia/PayRollManagementSystem/Payroll_Management_System.png)
-![Entity Relationship (ER) Diagram](https://MinShiMia.github.io/Big-Data-Project/BigDataProjectFlowchart.png)
+![Entity Relationship (ER) Diagram](https://MinShiMia.github.io/PayRollManagementSystem/Payroll_Management_System.png)
 
 # Assumptions/Notes About Data Entities and Relationships
 Employee and Payroll tables are the main entities in the payroll management system since this payroll management system is built to calculate employee payroll during specific periods.
