@@ -26,6 +26,7 @@ Our Target Customers are companies ranging from small business to big corporatio
 
 # Entity Relationship (ER) Diagram
 ![Entity Relationship (ER) Diagram](https://github.com/MinShiMia/PayRollManagementSystem/Payroll_Management_System.png)
+![Entity Relationship (ER) Diagram](https://MinShiMia.github.io/Big-Data-Project/BigDataProjectFlowchart.png)
 
 # Assumptions/Notes About Data Entities and Relationships
 Employee and Payroll tables are the main entities in the payroll management system since this payroll management system is built to calculate employee payroll during specific periods.
