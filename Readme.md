@@ -19,30 +19,43 @@ The Payroll Management System will provide several benefits to the business. Aut
 Our Target Customers are companies ranging from small business to big corporations. Our application is meant to be user friendly so that no company or employee fears the thought of figuring out our Payroll Management System. 
 
 # Entity Relationship (ER) Diagram
-![Entity Relationship (ER) Diagram](https://MinShiMia.github.com/PayRollManagementSystem/Payroll_Management_System.png)
+![Entity Relationship (ER) Diagram](https://MinShiMia.github.io/PayRollManagementSystem/Payroll_Management_System.png)
 
 # Assumptions/Notes About Data Entities and Relationships
 Employee and Payroll tables are the main entities in the payroll management system since this payroll management system is built to calculate employee payroll during specific periods.
 
 In designing the payroll management system, we have the following assumptions:
-1).	As for employee positions, we assume employees could change their departments and positions during their career life in the company. Thus, the position ID and department ID are not embedded in the 'Employee' table. Instead, we utilize an interaction table between "Employee" and "Department" called "Employee_Position' to store all the positions the employee has experienced, together with their supervisor's ID, start date, and end date.
-2).	As for employee pay per hour, we thought each employee should have an hourly rate stored in the "Employee" table. Even for the employees who are offered monthly or yearly salaries, we convert their salary into an hourly rate. And when there is a change in an employee's pay per unit, we will update it in the employee table.
-3).	As for employee PTO, we set a certain number of PTO hours for each employee each year, which might change depending on the Employee’s tenure and position. The employee's total PTO each year is stored in the "PTO" table. And the remaining PTO hours could be calculated by taking the difference between total PTO hours and the total PTO hours used during all payroll periods within that year according to the value of "PTO_Hours" in the "Employee_Hours_Worked" table.
-4).	As for employee deductions, we presume that the percentage for different types of deductions will change over time. That is why we have an interaction table inserted between the "Employee" and "Deductions" tables as the interaction table can store all the many types of deductions for each employee.
-5).	As for employee bonuses, we set their bonus_amt as a constant number during different payroll periods. 
-6).	When it comes to "Payroll" table, we give sample data for "Payroll_ID", "Employee_ID", "Pay_Date", "Start_Date", "End_Date", "Bonus_ID", and "Deduction_ID", but leave the fields "Gross_Pay", "Deductions" and "Net_Pay" empty since these three fields need to be filled by calculation. 
-7).	There are two methods to fill in the fields "Gross_Pay," "Deductions," and "Net_Pay" through calculation:
+1)	As for employee positions, we assume employees could change their departments and positions during their career life in the company. Thus, the position ID and department ID are not embedded in the 'Employee' table. Instead, we utilize an interaction table between "Employee" and "Department" called "Employee_Position' to store all the positions the employee has experienced, together with their supervisor's ID, start date, and end date.
+
+2)	As for employee pay per hour, we thought each employee should have an hourly rate stored in the "Employee" table. Even for the employees who are offered monthly or yearly salaries, we convert their salary into an hourly rate. And when there is a change in an employee's pay per unit, we will update it in the employee table.
+
+3)	As for employee PTO, we set a certain number of PTO hours for each employee each year, which might change depending on the Employee’s tenure and position. The employee's total PTO each year is stored in the "PTO" table. And the remaining PTO hours could be calculated by taking the difference between total PTO hours and the total PTO hours used during all payroll periods within that year according to the value of "PTO_Hours" in the "Employee_Hours_Worked" table.
+
+4)	As for employee deductions, we presume that the percentage for different types of deductions will change over time. That is why we have an interaction table inserted between the "Employee" and "Deductions" tables as the interaction table can store all the many types of deductions for each employee.
+
+5)	As for employee bonuses, we set their bonus_amt as a constant number during different payroll periods. 
+
+6)	When it comes to "Payroll" table, we give sample data for "Payroll_ID", "Employee_ID", "Pay_Date", "Start_Date", "End_Date", "Bonus_ID", and "Deduction_ID", but leave the fields "Gross_Pay", "Deductions" and "Net_Pay" empty since these three fields need to be filled by calculation. 
+
+7)	There are two methods to fill in the fields "Gross_Pay," "Deductions," and "Net_Pay" through calculation:
 Method 1: Use three stored functions to calculate gross pay, deductions, and net pay, and then use a stored procedure to utilize these three stored functions to update the values for the empty fields.
 Method 2: Create three views to store gross pay, deductions, and net pay information. Then update the payroll using the 'inner join' function for the payroll table and the views.
 
  
 # Scenarios covered for the database 
-1).	Validate remaining PTO to see if the requested time off is less than or equal to the remaining PTO balance.
-2).	Annually reload the PTO_Remaining balance for each employee on the 1st of the year based on the PTO_Yearly allotment for the employee.  The maximum PTO hours allowed for an employee at the start of the year is 120 hours. 
-3).	Employee deductions is flexible and dynamic because not every employee is going to pay a state tax, 401k, etc.
-4).	The Database should categorize and tally the hours that the Employee has worked for the last two weeks, and then calculate their deductions and net pay.
-5).	If an Employee gets a promotion, demotion, or lateral change the database only needs to make one change.
-6).	Along with their new position change we can update their hourly rate to reflect their new salary or hourly rate.
-7).	Employee bank account information can be changed to deal with a change related to a new account and routing number, account name, or an entirely new bank.
-8).	Our Payroll Management System also includes the functionality of allowing our customer to handout bonuses to their employees. We then integrate that number into our calculations.
+1)	Validate remaining PTO to see if the requested time off is less than or equal to the remaining PTO balance.
+
+2)	Annually reload the PTO_Remaining balance for each employee on the 1st of the year based on the PTO_Yearly allotment for the employee.  The maximum PTO hours allowed for an employee at the start of the year is 120 hours. 
+
+3)	Employee deductions is flexible and dynamic because not every employee is going to pay a state tax, 401k, etc.
+
+4)	The Database should categorize and tally the hours that the Employee has worked for the last two weeks, and then calculate their deductions and net pay.
+
+5)	If an Employee gets a promotion, demotion, or lateral change the database only needs to make one change.
+
+6)	Along with their new position change we can update their hourly rate to reflect their new salary or hourly rate.
+
+7)	Employee bank account information can be changed to deal with a change related to a new account and routing number, account name, or an entirely new bank.
+
+8)	Our Payroll Management System also includes the functionality of allowing our customer to handout bonuses to their employees. We then integrate that number into our calculations.
 
