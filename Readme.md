@@ -1,4 +1,4 @@
-# Problem Statement
+## Problem Statement
 The payroll management system is one indispensable and imperative component for each business. Running payroll is one of the most important responsibilities for business owners. 
 
 There are two main types of payroll management: manual payroll management using spreadsheets and payroll management systems based on relational databases. Many small business owners utilize the traditional excel spreadsheets to manage their payrolls since it is a handy and user-friendly tool. However, as the business grows and more employees join, the payroll management using spreadsheets tends to become messy and time-consuming, especially when the business owners generate paychecks based on multiple sheets, each containing a large amount of information. These shortcomings lead to the popularity of adopting payroll management systems based on relational databases in increased businesses and companies nowadays. 
@@ -7,7 +7,7 @@ A relational database payroll management system provides a better way for busine
 
 We will utilize MySQL, an open-source and free software, to design the payroll management system. And the payroll system tends to store employee personal information, track employee absence and days/hours worked, and deploy functions to generate income, taxes, and after-tax incomes.
 
-# Business Case
+## Business Case
 Reliable payroll management systems are important beyond the practical role they play in ensuring efficient and timely paying of employees. Payroll systems are also important to maintain employee morale and trust in the business’ ability to carry out its basic mission and objectives. Businesses that are growing or looking to scale must consider upgrading their payroll management system to keep up with the needs of the growing business and ensure the infrastructure of the organization can support future states of the business. 
 
 Our MySQL Payroll Management System will serve the payroll needs of companies that are at a stage where manual or spreadsheet-based payroll systems can no longer provide the level of accuracy and automation that the business needs. The technical rollout of the system requires our database schema, server space and a user interface that is not part of the scope of this project. Companies will face minimal risk with implementing this database solution assuming previous payroll history and employee information is easily accessible. Finally, the cost of the solution will be a subscription model with an upfront fee to cover the costs of initial implementation.
@@ -25,7 +25,7 @@ The Payroll Management System will provide several benefits to the business. Aut
 Our Target Customers are companies ranging from small business to big corporations. Our application is meant to be user friendly so that no company or employee fears the thought of figuring out our Payroll Management System. 
 
 # Entity Relationship (ER) Diagram
-![Entity Relationship (ER) Diagram (https://github.com/MinShiMia/PayRollManagementSystem/blob/8cad295fa42281a84aca287de1c7491d5ecb0784/Payroll_Management_System.png)
+![Entity Relationship (ER) Diagram](https://github.com/MinShiMia/PayRollManagementSystem/Payroll_Management_System.png)
 
 # Assumptions/Notes About Data Entities and Relationships
 Employee and Payroll tables are the main entities in the payroll management system since this payroll management system is built to calculate employee payroll during specific periods.
